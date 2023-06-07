@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --redWhite: linear-gradient(red, white);
+  --background: linear-gradient(#ff0aca, #ffffff);
+  --sexion-gradient: linear-gradient(#FFFFFF, #5d619e);
+}
+
+body {
+  background-color: rgb(255, 225, 230);
+}
+
+h1 {
+  width: 30%;
+  background: var(--redWhite);
+  display: flex;
+  justify-content: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px #ff0000;
+  padding: 50px;
+}
+
+#Pages {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Page {
+  padding: 10%;
+}
+
+#Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.Container-Items {
+  width: 100%;
+  height: 70vh;
+  background-color: pink;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  box-shadow: 2px 2px white;
+}
+
+span {
+  margin: 40px;
+  font-size: 50px;
+  background: var(--redWhite);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px #ff0000;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: #fff;
+  padding-top: 20vh;
+}
+
+.Sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.Sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: palevioletred;
+  display: block;
+  transition: 0.3s;
+}
+
+.Sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.Sidenav .Closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#Main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+#Tickets {
+  width: 100%;
+  height: 80vh;
+  background-color: red;
+  background-image: linear-gradient(rgb(255, 195, 205), red);
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+video {
+  width: 50vw;
+  height: 60vh;
+  margin-top: 50px;
+}
+
+p {
+  padding: 25px;
+  font-size: 10px;
+}
+.Container-Items img {
+  width: 100%; /* Set the width to 100% of the parent container */
+  height: 100%; /* Maintain the aspect ratio */
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.Container-Items p {
+  height: 40%;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+#VideoSlideshow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#SlideshowVideo {
+  width: 100%;
+  height: 100%;
+  animation: fade 5s infinite;
+}
+
+video {
+  width: 100%;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+video.fade-out {
+  opacity: 0;
+}
+
+video.fade-in {
+  opacity: 1;
+}
+
+#MyVideo {
+  width: 100%;
+  height: auto;
+}
